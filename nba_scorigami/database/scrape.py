@@ -10,6 +10,7 @@ from mysql.connector import Error
 BBAL_REF_BASE = "https://www.basketball-reference.com"
 config = read_config()
 
+
 # Building a list of urls for each season's data
 def get_season_pages() -> list[str]:
     urls = []
@@ -22,6 +23,7 @@ def get_season_pages() -> list[str]:
             season_path = header.a.get("href").replace(".html", "_games.html")
             urls.append(BBAL_REF_BASE + season_path)
     return urls
+
 
 # Building a list of urls for each month's data in a season
 def get_month_pages(season_url):

@@ -1,3 +1,4 @@
 poetry.lock
 nba_scorigami/database/__pycache__/connection.cpython-312.pyc
 nba_scorigami/database/db.config
+.env

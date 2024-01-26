@@ -1,9 +1,11 @@
 import configparser
 import os
+
 import mysql.connector
 from mysql.connector import Error
 
 CONFIG_FILE = "db.config"
+
 
 # Getting config information
 def read_config():
@@ -27,6 +29,7 @@ def create_db_connection(host_name, user_name, user_password, db):
         print(f"Error: '{err}'")
 
     return connection
+
 
 """
 CREATE TABLE score_pairs (
